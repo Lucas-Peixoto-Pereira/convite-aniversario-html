@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('//raw.githubusercontent.com/appbrewery/webdev/main/birthday-cake3.4.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    min-height: 100vh;
+  }
+  h1 {
+    color: #ffeb3b;
+    font-size: 3em;
+  }
+  h2 {
+    color: #ffca28;
+    margin-bottom: 20px;
+  }
+  img {
+    width: 300px;
+    border-radius: 15px;
+    display: none; 
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  iframe {
+    border: 2px solid #ffeb3b;
+    border-radius: 10px;
+}
+.footer {
+    flex-direction: column;
+       padding: 5rem;
+  }
