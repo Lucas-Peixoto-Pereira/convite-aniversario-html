@@ -1,3 +1,13 @@
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 body {
     font-family: Arial, sans-serif;
     background: url('//raw.githubusercontent.com/appbrewery/webdev/main/birthday-cake3.4.jpeg') no-repeat center center fixed;
@@ -18,10 +28,12 @@ body {
   h1 {
     color: #ffeb3b;
     font-size: 3em;
+    animation: slideIn 1.5s ease-out;
   }
   h2 {
     color: #ffca28;
     margin-bottom: 20px;
+    animation: slideIn 1.5s ease-out;
   }
   img {
     width: 300px;
@@ -44,3 +56,5 @@ body {
     flex-direction: column;
        padding: 5rem;
   }
+
+  
