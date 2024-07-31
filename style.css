@@ -1,60 +1,143 @@
 @keyframes slideIn {
-    0% {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideCarousel {
+  0%,
+  25% {
+    transform: translateX(0);
+  }
+  33%,
+  58% {
+    transform: translateX(-100%);
+  }
+  66%,
+  91% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 body {
-    font-family: Arial, sans-serif;
-    background: url('//raw.githubusercontent.com/appbrewery/webdev/main/birthday-cake3.4.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  .overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 50px;
-    min-height: 100vh;
-  }
-  h1 {
-    color: #ffeb3b;
-    font-size: 3em;
-    animation: slideIn 1.5s ease-out;
-  }
-  h2 {
-    color: #ffca28;
-    margin-bottom: 20px;
-    animation: slideIn 1.5s ease-out;
-  }
-  img {
-    width: 300px;
-    border-radius: 15px;
-    display: none; 
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    margin: 10px 0;
-    font-size: 1.2em;
-  }
-  iframe {
-    border: 2px solid #ffeb3b;
-    border-radius: 10px;
+  font-family: Arial, sans-serif;
+  background: url("//raw.githubusercontent.com/appbrewery/webdev/main/birthday-cake3.4.jpeg")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  min-height: 100vh;
+}
+h1 {
+  color: #ffeb3b;
+  font-size: 3em;
+  animation: slideIn 1.5s ease-out;
+}
+h2 {
+  color: #ffca28;
+  margin-bottom: 20px;
+  animation: slideIn 1.5s ease-out;
+}
+img {
+  width: 300px;
+  border-radius: 15px;
+  display: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+iframe {
+  border: 2px solid #ffeb3b;
+  border-radius: 10px;
 }
 .footer {
-    flex-direction: column;
-       padding: 5rem;
-  }
+  flex-direction: column;
+  padding: 5rem;
+}
 
-  
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ac0cd4;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 10px;
+  display: block; 
+  object-fit: cover; 
+}
+
+
+input[name="carousel"] {
+  display: none;
+}
+
+
+.carousel-controls {
+  margin-top: 10px;
+}
+
+.carousel-control {
+  cursor: pointer;
+  padding: 5px 5px;
+  margin:  5px;
+  background-color: #ac0cd4;
+  border-radius: 4rem;
+  transition: background-color 0.3s;
+}
+
+.carousel-control:hover {
+  background-color: #aaa;
+}
+
+
+#item-1:checked ~ .carousel {
+  transform: translateX(0%);
+}
+
+#item-2:checked ~ .carousel {
+  transform: translateX(-100%);
+}
+
+#item-3:checked ~ .carousel {
+  transform: translateX(-200%);
+}
