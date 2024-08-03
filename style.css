@@ -186,3 +186,21 @@ input[name="carousel"] {
 .confirmation-form button:hover {
   background-color: #2f6299;
 }
+
+.guest-list-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.guest-list-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.guest-list-button:hover {
+  background-color: #45a049;
+}
