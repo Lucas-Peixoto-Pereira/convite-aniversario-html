@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lobster&display=swap");
+
+
 body {
   font-family: "Roboto", Arial, sans-serif;
   background-color: #f7f7f7;
@@ -20,6 +23,8 @@ body {
 h1 {
   color: #333;
   margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 2.5em;
 }
 
 .section {
@@ -71,8 +76,8 @@ h1 {
 }
 
 .guest-item:hover {
-  transform: scale(1.02); /* Efeito de aumento ao passar o mouse */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+  transform: scale(1.02); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .guest-image {
@@ -86,14 +91,14 @@ h1 {
 .guest-item span {
   font-weight: bold;
   flex: 1;
-  text-align: left; /* Alinha o texto à esquerda */
+  text-align: left; 
 }
 
 .guest-item p {
   margin: 0;
   font-size: 0.9em;
   color: #666;
-  text-align: left; /* Alinha o texto à esquerda */
+  text-align: left; 
 }
 
 footer {
@@ -203,4 +208,16 @@ footer {
   margin-top: 20px;
   font-size: 0.9em;
   color: #555;
+}
+
+@media (max-width: 768px) {
+  .guest-item {
+    flex-direction: center;
+    align-items: flex-start;
+  }
+
+  .guest-image {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
 }
