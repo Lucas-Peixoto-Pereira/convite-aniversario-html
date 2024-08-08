@@ -1,144 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lobster&display=swap");
 
-
 body {
   font-family: "Roboto", Arial, sans-serif;
-  background-color: #f7f7f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background: linear-gradient(90deg, #161c22, #00d4ff);
   margin: 0;
-}
-.container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  width: 100%;
-  text-align: center;
-}
-
-h1 {
-  color: #333;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-  font-size: 2.5em;
-}
-
-.section {
-  margin-bottom: 20px;
-}
-
-.section h2 {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-.guest-list {
-  list-style: none;
   padding: 0;
-  margin: 0;
-}
-
-.guest-item {
   display: flex;
-  align-items: center;
-  justify-content: center; /* Centraliza os itens horizontalmente */
-  padding: 10px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #eaeaea;
-  transition: background-color 0.3s;
-  border-radius: 10px; /* Arredonda as bordas */
 }
 
-.guest-item:nth-child(1) {
-  background-color: #f8d7da;
-}
-
-.guest-item:nth-child(2) {
-  background-color: #d1ecf1;
-}
-
-.guest-item:nth-child(3) {
-  background-color: #d4edda;
-}
-
-.guest-item:nth-child(4) {
-  background-color: #fff3cd;
-}
-
-.guest-item:nth-child(5) {
-  background-color: #d6d8db;
-}
-
-.guest-item:hover {
-  transform: scale(1.02); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.guest-image {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin-right: 15px;
-  object-fit: cover;
-}
-
-.guest-item span {
-  font-weight: bold;
-  flex: 1;
-  text-align: left; 
-}
-
-.guest-item p {
+header {
+  background: linear-gradient(90deg, #161c22, #235835, #00d4ff);
+  color: rgb(5, 2, 2);
+  padding: 1rem;
   margin: 0;
-  font-size: 0.9em;
-  color: #666;
-  text-align: left; 
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.0rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
-
-footer {
-  margin-top: 20px;
-  font-size: 0.9em;
-  color: #555;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lobster&display=swap");
 
 .container {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   text-align: center;
+  margin: 100px auto;
+  margin-left: 220px;
 }
 
 h1 {
   font-family: "Lobster", cursive;
-  color: #333;
-  margin-bottom: 20px;
   font-size: 2.5em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.section {
-  margin-bottom: 20px;
-}
+
 
 .section h2 {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
+  color: #000000;
+  border-bottom: 2px solid #000000;
   padding-bottom: 5px;
   margin-bottom: 10px;
   font-size: 1.8em;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .guest-list {
@@ -178,17 +88,14 @@ h1 {
   background-color: #d6d8db;
 }
 
-.guest-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
 .guest-image {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-right: 15px;
   object-fit: cover;
+  border: 3px solid #007bff;
 }
 
 .guest-item span {
@@ -205,19 +112,40 @@ h1 {
 }
 
 footer {
-  margin-top: 20px;
-  font-size: 0.9em;
-  color: #555;
+  background: linear-gradient(90deg, #161c22, #235835, #00d4ff);
+
+  color: rgb(7, 5, 5);
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer .social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer .social-links li {
+  margin: 0 10px;
+}
+
+footer .social-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
 }
 
 @media (max-width: 768px) {
-  .guest-item {
-    flex-direction: center;
-    align-items: flex-start;
+  .container {
+    margin-left: 0;
   }
 
-  .guest-image {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
+  .sidebar {
+    display: none;
   }
 }
