@@ -7,10 +7,19 @@
     <link rel="stylesheet" href="./lista.css" />
   </head>
   <body>
-    <div class="container">
+    <header>
       <h1>Lista de Convidados</h1>
-
-      <div class="section">
+    </header>
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="#amigos">Amigos</a></li>
+          <li><a href="#familia">Família</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="container">
+      <div class="section" id="amigos">
         <h2>Amigos</h2>
         <ul class="guest-list">
           <li class="guest-item">
@@ -34,7 +43,7 @@
         </ul>
       </div>
 
-      <div class="section">
+      <div class="section" id="familia">
         <h2>Família</h2>
         <ul class="guest-list">
           <li class="guest-item">
@@ -57,6 +66,14 @@
           </li>
         </ul>
       </div>
-    </div>
+    </main>
+    <footer>
+      <p>Siga-nos nas redes sociais:</p>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
